@@ -83,13 +83,13 @@ sectorSelector.addEventListener("change", (e) => {
 
 calcButton.addEventListener("click", (e) => {
   const level = levelSelector.value - 1;
-  const area = document.querySelector(".area");
+  const space = document.querySelector(".space");
   const sector = sectorSelector.value;
-  if (area.value) {
+  if (space.value) {
     if (sectorLimit[sector][level] === 0) {
       resultOutput.textContent = "집합금지";
     } else {
-      const result = Math.floor(area.value / sectorLimit[sector][level]);
+      const result = Math.floor(space.value / sectorLimit[sector][level]);
       resultOutput.querySelector(".pop-limit").textContent = `${result}명`;
     }
   } else {

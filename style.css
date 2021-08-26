@@ -1,12 +1,33 @@
 body {
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+}
+
 li {
   list-style-type: none;
+}
+
+.current li {
+  margin: 0.5rem;
+}
+
+.space {
+  width: 3rem;
+}
+.calc-input-area {
+  display: flex;
+  justify-content: center;
+}
+
+.calc-input-area > * {
+  margin: 0.5rem 1rem;
 }

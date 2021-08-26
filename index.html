@@ -4,58 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>방역수칙 계산기</title>
   </head>
   <body>
-    <select name="region" id="region-select">
-      <option value="seoul">서울</option>
-      <option value="gyeongi">경기</option>
-      <option value="incheon">인천</option>
-      <option value="gangwon">강원</option>
-      <option value="choongbuk">충북</option>
-      <option value="choongnam">충남</option>
-      <option value="sejong">세종</option>
-      <option value="daejeon">대전</option>
-      <option value="cheonbuk">전북</option>
-      <option value="cheonnam">전남</option>
-      <option value="gwangju">광주</option>
-      <option value="gyeongbuk">경북</option>
-      <option value="gyeongnam">경남</option>
-      <option value="daegu">대구</option>
-      <option value="busan">부산</option>
-      <option value="jeju">제주</option>
-    </select>
-    <ul class="current">
-      <li>현재 거리두기 단계: <span class="level"></span></li>
-      <li>모임 인원: <span class="group"></span></li>
-      <li>행사: <span class="event"></span></li>
-      <li>집회: <span class="protest"></span></li>
-    </ul>
+    <h1>방역수칙 계산기</h1>
 
-    <select name="level" id="level-select">
-      <option value="1">1단계</option>
-      <option value="2">2단계</option>
-      <option value="3">3단계</option>
-      <option value="4">4단계</option>
-    </select>
+    <hr />
 
-    <select name="sector" id="sector-select">
-      <option value="club">유흥시설</option>
-      <option value="dance">콜라텍/무도장</option>
-      <option value="holdem">홀덤펍/홀덤게임장</option>
-      <option value="restaurant">식당/카페</option>
-      <option value="karaoke">노래연습장</option>
-      <option value="sauna">목욕장업</option>
-      <option value="fitness">실내 체육시설</option>
-      <option value="visit">직접판매 홍보관</option>
-    </select>
+    <section class="region-container">
+      <label for="region">지역 선택: </label>
+      <select name="region" id="region-select">
+        <option value="seoul">서울</option>
+        <option value="gyeongi">경기</option>
+        <option value="incheon">인천</option>
+        <option value="gangwon">강원</option>
+        <option value="choongbuk">충북</option>
+        <option value="choongnam">충남</option>
+        <option value="sejong">세종</option>
+        <option value="daejeon">대전</option>
+        <option value="cheonbuk">전북</option>
+        <option value="cheonnam">전남</option>
+        <option value="gwangju">광주</option>
+        <option value="gyeongbuk">경북</option>
+        <option value="gyeongnam">경남</option>
+        <option value="daegu">대구</option>
+        <option value="busan">부산</option>
+        <option value="jeju">제주</option>
+      </select>
 
-    <div>
-      <input type="number" placeholder="면적" class="area" />
-      <span>m&#178;</span>
-      <input type="button" value="계산하기" class="calc-button" />
+      <div class="general-rules">
+        <h3>기본 방역 수칙:</h3>
+        <ul class="current">
+          <li>현재 거리두기 단계: <span class="level"></span></li>
+          <li>모임 인원: <span class="group"></span></li>
+          <li>행사: <span class="event"></span></li>
+          <li>집회: <span class="protest"></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <hr />
+
+    <section class="calc-container">
+      <section class="calc-input-area">
+        <div>
+          <label for="level">거리두기 단계: </label>
+          <select name="level" id="level-select">
+            <option value="1">1단계</option>
+            <option value="2">2단계</option>
+            <option value="3">3단계</option>
+            <option value="4">4단계</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sector">업종 선택: </label>
+          <select name="sector" id="sector-select">
+            <option value="club">유흥시설</option>
+            <option value="dance">콜라텍/무도장</option>
+            <option value="holdem">홀덤펍/홀덤게임장</option>
+            <option value="restaurant">식당/카페</option>
+            <option value="karaoke">노래연습장</option>
+            <option value="sauna">목욕장업</option>
+            <option value="fitness">실내 체육시설</option>
+            <option value="visit">직접판매 홍보관</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="space">면적: </label>
+          <input name="space" type="number" placeholder="면적" class="space" />
+          <span>m&#178;</span>
+          <input type="button" value="계산" class="calc-button" />
+        </div>
+      </section>
+      <h3>계산 결과</h3>
       <p class="result">수용 가능 인원: <span class="pop-limit"></span></p>
-    </div>
+    </section>
 
     <script src="main.js"></script>
   </body>

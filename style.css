@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 a {
@@ -16,18 +17,103 @@ li {
   list-style-type: none;
 }
 
+label {
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: solid 1px #fff;
+}
+
+select {
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+main {
+  width: 50%;
+  margin: auto;
+  padding: 1rem 0;
+  background-color: rgb(128, 147, 253);
+  color: #fff;
+}
+
+.region-container {
+  padding: 1rem 0;
+  background-color: rgba(194, 203, 255, 0.233);
+}
+
+.current h2 {
+  margin: 0.5rem auto;
+}
+
 .current li {
   margin: 0.5rem;
 }
 
-.space {
-  width: 3rem;
+.general-rules-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.general-rules-title {
+  width: 30%;
+  height: 10vh;
+  padding-right: 2rem;
+  border-right: solid 2px #fff;
+  text-align: right;
+}
+
+.general-rules-content {
+  width: 60%;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.space {
+  width: 3.5rem;
+  text-align: right;
+}
+
+.calc-container {
+  padding: 1rem;
+}
+
 .calc-input-area {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .calc-input-area > * {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
+.calc-button {
+  width: 4rem;
+  margin: 1rem auto;
+  border-radius: 20px;
+  border: solid 1px #fff;
+  padding: 0.5rem 1rem;
+  background-color: rgb(147, 162, 255);
+  color: #fff;
+  cursor: pointer;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-title {
+  border-right: solid 2px #fff;
+  width: 40%;
+  margin: 1rem auto;
+  padding: 1rem 2rem 1rem 0;
+  text-align: right;
+}
+
+.result {
+  width: 60%;
 }

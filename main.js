@@ -86,11 +86,15 @@ calcButton.addEventListener("click", (e) => {
   const space = document.querySelector(".space");
   const sector = sectorSelector.value;
   if (space.value) {
-    if (sectorLimit[sector][level] === 0) {
-      resultOutput.textContent = "집합금지";
+    if (space.value < 50) {
+      alert("계산 가능한 최소 면적은 50입니다.");
     } else {
-      const result = Math.floor(space.value / sectorLimit[sector][level]);
-      resultOutput.querySelector(".pop-limit").textContent = `${result}명`;
+      if (sectorLimit[sector][level] === 0) {
+        resultOutput.textContent = "집합금지";
+      } else {
+        const result = Math.floor(space.value / sectorLimit[sector][level]);
+        resultOutput.textContent = `${result}명`;
+      }
     }
   } else {
     alert("면적을 입력해주세요");
